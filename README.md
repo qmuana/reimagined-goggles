@@ -1,2 +1,2 @@
 # reimagined-goggles
-a personal project on ecom site for gamming accessories
+a personal project on ecom site for gamming accessories 
