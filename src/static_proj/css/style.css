@@ -1,0 +1,24 @@
+{% load static %}
+
+.navbar{
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+
+.navbar-nav{
+  display: flex;
+  flex-direction: column;
+
+}
+
+@-ms-viewport{
+  width: device-width;
+}
+
+
+

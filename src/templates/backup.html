@@ -1,0 +1,222 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title></title>
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" >
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" >
+  <!--- Local --->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+</head>
+<body id="home">
+
+       <!--- wrapper begin ---->
+     <!--  <input type="checkbox" id="check"> -->
+    <!--header area start-->
+    <!-- <header>
+      <label for="check">
+        <i class="fas fa-bars" id="sidebar_btn"></i>
+      </label>
+      <div class="left_area">
+        <h3>Coding <span>Snow</span></h3>
+      </div>
+      {% if user is not None %}
+      <div>
+        <a href="{% url 'login' %}" class="login">Log In</a>
+      </div>
+      {% endif %}
+      {% if request.user.is_authenticated %}
+      <div class="right_area">
+        <a href="{% url 'logout' %}" class="logout_btn">Logout</a>
+      </div>
+      {% endif %}
+    </header> -->
+    <!--header area end-->
+    <!--mobile navigation bar start-->
+
+<nav class="navbar navbar-expand-sm navbar-dark fixed-top">
+          <div class="container-fluid">
+                  <a href="#" class="navbar-brand">
+                  <img src="#"  height="30" class="d-inline-block align-top mr-3">Diploma</a>
+
+                  <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+          </div>
+                  <div class="collapse navbar-collapse" id="navbarCollapse">
+                  <ul class="navbar-nav mr-auto">
+
+                        <li class="nav-item">
+                                <a href="#" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                                <a href="newspage.php" class="nav-link">News</a>
+                        </li>
+                        <li class="nav-item">
+                                <a href="#" class="nav-link">Dcse</a>
+                        </li>
+                        <li class="nav-item">
+                                <a href="#" class="nav-link">Dete</a>
+                        </li>
+                        <li class="nav-item">
+                                <a href="#" class="nav-link">Articles</a>
+                        </li>
+
+                        {% if user is not None %}
+        
+                        <a href="{% url 'login' %}"><i class="fas fa-sign-in-alt"></i><span>Login</span></a>
+                      
+                        {% endif %}
+                        {% if request.user.is_authenticated %}
+
+                        <a href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i><span>Logout</span></a>
+                        
+                        {% endif %}
+
+
+                  </ul>
+
+                       
+
+                  </div>
+            
+        </nav>
+
+
+
+
+
+
+
+
+
+
+    <!--sidebar end-->
+<!-- 
+    <div class="content">
+      <div class="card">
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+      </div>
+      <div class="card">
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+      </div>
+      <div class="card">
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+      </div>
+    </div>
+ -->
+
+    <!---- Javascript ----->
+    <script type="text/javascript">
+    $(document).ready(function(){
+      $('.nav_btn').click(function(){
+        $('.mobile_nav_items').toggleClass('active');
+      });
+    });
+    </script>
+
+
+
+               <!------------------footer----------------->
+
+          <section id="footer">
+            <div class="footer">
+              <div class="container-fluid mt-4 text-center text-light">
+                <div class="container">
+                  <div class="row mt-2">
+
+              <!------------------first column------------->
+
+                          <div class="col col-6 col-xs-6 col-sm-6 col-md-3 col-lg-3 col-xl-3  mb-r mt-3 mx-auto">
+                              <h5 class="font-bold">Others</h5>
+                              <h6 class="" style="border-bottom:1px solid #333;"></h6>
+                              <ul class="list-unstyled"style="line-height:30px;">
+                              <li><a href="http://www.antiragging.in/" target="_blank">anti raging</a></li>
+                              <li><a href="https://www.aicte-india.org/" target="_blank">aicte</a></li>
+                          </div>
+
+              <!-----------------second Coulumn----------->
+
+                          <div class="col col-6 col-xs-6 col-sm-6 col-md-3 col-lg-3 col-xl-3  mb-r mt-3 mx-auto">
+                              <h5 class="font-bold">Useful links</h5>
+                              <h6 class="" style="border-bottom:1px solid #333;"></h6>
+                              <ul class="list-unstyled"style="line-height:30px;">
+                                  <li><a href="https://dhte.mizoram.gov.in/" target="_blank">Higher & Techical Education</a></li>
+                                  <li><a href="http://nielit.gov.in/aizawl/" target="_blank">Nielit Official</a></li>
+                                  <li><a href="https://scholarships.mizoram.gov.in/" target="_blank">Scholarships</a></li>
+                              </ul>
+                          </div>
+
+              <!---------------Third column--------------->
+
+                          <div class="col col-6 col-xs-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 mt-3 mx-auto">
+                              <h5 class="font-bold">Information</h5>
+                              <h6 class="#" style="border-bottom:1px solid #333;"></h6>
+                              <ul class="list-unstyled"style="line-height:30px;">
+                                    <li><a href="feedback.php">Contact Us</a></li>
+                                    <li><a href="aboutus.php">About Us</a></li>
+                              </ul>
+                         </div>
+
+              <!--------------Fourth Column---------------->
+
+                         <div class="col col-6 col-xs-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 mx-auto mb-r mt-3">
+                              <h5 class="font-bold">Our location</h5>
+                              <h6 class="" style="border-bottom:1px solid #333;"></h6>
+                              <address style="font-size:15px;">
+                                    NIELIT Aizawl Centre<br>
+                                    Aizawl Industrial Estate,<br>
+                                    Zuangtui, Aizawl-796017<br>
+                              <abbr title="Telephone">T: </abbr><a href="tel:+03892320581">(0389) 2320581</a><br>
+                            </address>
+                         </div>
+
+              <!--------------social link------------------>
+
+                         <div class="container ficon text-center">
+                               <ul class="d-inline-flex p-1">
+                                     <li><a href="https://www.facebook.com/NielitDiplomaAizawl/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                     <li><a href="https://www.youtube.com/channel/UCilo2XHfLoNzpqfPoOatxFw?view_as=subscriber" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                                     <li><a href="https://www.instagram.com/nielitdiploma/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                     <li><a href="https://twitter.com/nielitdiploma" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                               </ul>
+                         </div>
+
+              <!--------------footer Copyright-------------->
+
+                          <div class="footer-copyright mb-4 mx-auto">
+                             <div class="container-fluid ">
+                                Copyright &copy; <?php echo date('Y'); ?> nielitdiploma
+
+                            </div>
+                      </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+
+                  <script src="{% static 'js/jquery.min.js' %}"></script>
+                  <script src="{% static 'js/popper.min.js' %}"></script>
+                  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+                  <script src="{% static 'js/news.js' %}"></script>
+                  <script src="{% static 'js/binary.js' %}"></script>
+
+       
+       
+</body>
+</html>
